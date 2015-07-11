@@ -134,7 +134,7 @@ class Npm
   end
 
   def install(name = '', options = {})
-    return invoke("npm install #{name}#{options.save ? ' -save' : ''}#{options.global ? ' -g' : ''}")
+    return invoke("npm install #{name}#{options['save'] ? ' -save' : ''}#{options['global'] ? ' -g' : ''}")
   end
 
   def run(*scripts)
