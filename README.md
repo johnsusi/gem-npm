@@ -1,34 +1,16 @@
-# NPM and package.json utility for Ruby
+# A collection of small rubygems
 --------------------------------------------------------------------------------
 
-## Description
+## List of gems
 --------------------------------------------------------------------------------
 
-A gem that simplifies working with package.json files.
+  - [npm](lib/npm.md)
 
-- Adds `npm bin` to ENV['PATH']
-- Loads package.json and make it available as properties
-
-## Usage
+## Installation
 --------------------------------------------------------------------------------
 
-To use Npm
-```ruby
-require 'npm'
-```
-
-Simple usage
-```ruby
-npm = Npm.new
-
-puts npm.name + '-' + npm.version
-
-npm.install
-npm.run 'browserify'
-
-```
-
-Custom locations
-```ruby
-npm = Npm.new( '/path/to/package.json' )
-```
+~~~ruby
+git 'https://github.com/johnsusi/gems.git' do
+  gem 'npm'
+end
+~~~
